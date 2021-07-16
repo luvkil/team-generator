@@ -1,24 +1,46 @@
-const employee = require('../lib/employee');
+const Intern = require('../lib/intern');
 
 
-const employee = new Employee(1, '@', 'john');
+const intern = new Intern(1, '@', 'john', 'uncc');
 test('creates a employee object', () => {
     
-    expectNum(employee.id);
-    expectToBe(employee.Name,'John');
-    expectStr(employee.email, '@');
-    expectToBe(employee.role, 'Employee');
+    expectNum   (intern.id);
+    expectToStr  (intern.Name,'John');
+    expectStr   (intern.email, '@');
+    expectToBe  (intern.role, 'intern');
     
 });
-test('gets employee\'s name', () => {
-    expectStr(employee.getName(), `${employee.name}`);
+test('gets intern\'s name', () => {
+    expectStr(intern.getName(), `${intern.name}`);
 });
-test('gets employee\'s ID', () => {
-    expectStr(employee.getId(), `${employee.id}`);
+test('gets intern\'s ID', () => {
+    expectStr(intern.getId(), `${intern.id}`);
 });
-test('gets employee\'s email', () => {
-    expectStr(employee.getEmail(), `${employee.email}`);
+test('gets intern\'s email', () => {
+    expectStr(intern.getEmail(), `${intern.email}`);
 });
-test('gets employee\'s role', () => {
-    expectStr(employee.getRole(), employee.role);
+test('gets intern\'s school', () => {
+    expectStr(intern.getSchool(), `${intern.school}`);
 });
+
+test('gets intern\'s role', () => {
+    expectStr(intern.getRole(), intern.role);
+});
+
+
+//jest documentation
+
+/*const myBeverage = {
+  delicious: true,
+  sour: false,
+};
+
+describe('my beverage', () => {
+  test('is delicious', () => {
+    expect(myBeverage.delicious).toBeTruthy();
+  });
+
+  test('is not sour', () => {
+    expect(myBeverage.sour).toBeFalsy();
+  });
+});*/

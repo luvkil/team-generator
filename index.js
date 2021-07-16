@@ -12,7 +12,7 @@ const render = require("./src/page-template.js");
 
 const teamMembers = [];
 const idArray = [];
-
+console.log(teamMembers.answers.managerName);
 function appMenu() {
 
   function createManager() {

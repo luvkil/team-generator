@@ -1,24 +1,49 @@
-const employee = require('../lib/employee');
+const Mananger = require('../lib/manager');
 
 
-const employee = new Employee(1, '@', 'john');
+const manager = new Employee(1, '@', 'john',1);
 test('creates a employee object', () => {
     
-    expectNum(employee.id);
-    expectToBe(employee.Name,'John');
-    expectStr(employee.email, '@');
-    expectToBe(employee.role, 'Employee');
+    expectNum   (manager.id);
+    expectToStr  (manager.Name,'John');
+    expectStr   (manager.email, '@');
+    expectToBe  (manager.role, 'manager');
+    expectNum   (manager.officeNumber)
+
     
 });
 test('gets employee\'s name', () => {
-    expectStr(employee.getName(), `${employee.name}`);
+    expectStr(manager.getName(), `${manager.name}`);
 });
 test('gets employee\'s ID', () => {
-    expectStr(employee.getId(), `${employee.id}`);
+    expectStr(manager.getId(), `${manager.id}`);
 });
 test('gets employee\'s email', () => {
-    expectStr(employee.getEmail(), `${employee.email}`);
+    expectStr(manager.getEmail(), `${manager.email}`);
 });
 test('gets employee\'s role', () => {
-    expectStr(employee.getRole(), employee.role);
+    expectStr(manager.getRole(), manager.role);
 });
+
+
+test('gets employee\'s role', () => {
+    expectStr(manager.officeNumber(), `${manager.officeNumber}`);
+});
+
+
+//jest documentation
+
+/*const myBeverage = {
+  delicious: true,
+  sour: false,
+};
+
+describe('my beverage', () => {
+  test('is delicious', () => {
+    expect(myBeverage.delicious).toBeTruthy();
+  });
+
+  test('is not sour', () => {
+    expect(myBeverage.sour).toBeFalsy();
+  });
+});*/
