@@ -1,3 +1,7 @@
+const manager = require("../lib/manager");
+const engineer = require("../lib/engineer");
+const entern = require("../lib/intern");
+const employee = require("../lib/employee");
 
 const htmlGenerator = function(answer){
     `<!DOCTYPE html>
