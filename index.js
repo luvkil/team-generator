@@ -5,14 +5,18 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "output")
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+const OUTPUT_DIR = path.resolve(__dirname, "index.html")
+const outputPath = path.join(OUTPUT_DIR, "index.html");
 
 const render = require("./src/page-template.js");
+const { run } = require("jest");
 
 const teamMembers = [];
+//console.log(teamMembers);
+//teamMembers.forEach(managerial => console.log(managerial.answers.managerName))
+
 const idArray = [];
-console.log(teamMembers.answers.managerName);
+
 function appMenu() {
 
   function createManager() {
@@ -75,8 +79,16 @@ function appMenu() {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamMembers.push(manager);
       idArray.push(answers.managerId);
+
+
+
+
       createTeam();
+
+     
+
     });
+    
   }
 
   function createTeam() {
