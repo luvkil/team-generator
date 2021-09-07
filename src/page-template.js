@@ -1,7 +1,7 @@
-const Manager = require("../lib/manager");
-const Engineer = require("../lib/engineer");
-const Intern = require("../lib/intern");
-const Employee = require("../lib/employee");
+// const Manager = require("../lib/manager");
+// const Engineer = require("../lib/engineer");
+// const Intern = require("../lib/intern");
+// const Employee = require("../lib/employee");
 
 
 
@@ -16,8 +16,8 @@ function myFunction(item) {
 // We could write a function that loops through the passed in 'teamMembers' array and test what type of Object (Object Role)
 
 
-const managerHTML = function(employeeObj) {
-    if(employeeObj.getRole() === "Manager") {
+const managerHTML = (employeeObj) => {
+   // if(emp.getRole() === "Manager") {
         return `<div class="card employee-card">
                     <div class="card-header">
                         <h2 class="card-title">${employeeObj.getName()}</h2>
@@ -31,13 +31,13 @@ const managerHTML = function(employeeObj) {
                         </ul>
                     </div>
                 </div>`;
-    } else { return console.log('review')}
+    //} else { return console.log('review')}
 }
 
 
 
-const engineerHTML = function(employeeObj){
-    if(employeeObj.getRole() === "engineer") {
+const engineerHTML = (employeeObj) =>{
+   // if(employeeObj.getRole() === "engineer") {
       return  `<div class="card employee-card">
                     <div class="card-header">
                         <h2 class="card-title">${employeeObj.getName()} </h2>
@@ -53,13 +53,13 @@ const engineerHTML = function(employeeObj){
                     </div>
                 </div>`;
 
-    } else {return console.log('review')}
+ //   } else {return console.log('review')}
 } 
 
 
 
-const internHTML = function(employeeObj){
-    if(employeeObj.getRole() === "intern"){
+const internHTML = (employeeObj) =>{
+   // if(employeeObj.getRole() === "intern"){
     return `<div class="card employee-card">
                     <div class="card-header">
                         <h2 class="card-title">${employeeObj.internName()} </h2>
@@ -74,21 +74,24 @@ const internHTML = function(employeeObj){
                         </ul>
                     </div>
                 </div>`
-    } else {return console.log('review')}
+  //  } else {return console.log('review')}
 }
 
     
 
 
 
-const htmlGenerator = function(answers){
+const htmlGenerator = (answers) => {
    // console.log(answers);   // --> teamMembers : [Manager, Engineer, Engineer, Intern]
-
-    answers.forEach(function(emp) {
+        let myteam = [];
+        console.log(myteam)
+    answers.forEach(emp => {
         if(emp.getRole() === 'Manager') {
-            managerHTML(emp);
+            myteam.push(managerHTML(emp));
         } else if (emp.getRole() === 'Engineer') {
-            engineerHTML(emp);
+            myteam.push(engineerHTML(emp));
+        } else if (emp.getRole() === 'Intern') {
+           myteam.push(internHTML(emp));
         }
     })
     return `<!DOCTYPE html>
@@ -119,11 +122,7 @@ const htmlGenerator = function(answers){
 
             <div class="team-area col-12 d-flex justify-content-center">
 
-                ${managerHTML(answers[0])}
-
-                ${engineerHTML(answers[1])}
-
-                ${internHTML(answers[2])}
+                ${myteam.join("")}
 
             </div>
         </div>
@@ -138,9 +137,6 @@ const htmlGenerator = function(answers){
 
 };
 
-
-
-console.log(htmlGenerator());
 
 
 module.exports = htmlGenerator;
