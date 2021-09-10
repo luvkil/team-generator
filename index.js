@@ -6,7 +6,7 @@ const path = require("path");
 const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "./src/index.html")
-const outputPath = path.join(OUTPUT_DIR, "./src/page-template.js");
+const outputPath = path.join(OUTPUT_DIR, "'./src/page-template.js");
 
 const render = require("./src/page-template.js");
 const { run } = require("jest");

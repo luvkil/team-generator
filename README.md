@@ -1,24 +1,19 @@
-# 10 Object-Oriented Programming: Team Profile Generator
+#  Team Profile Generator
 
-## Your Task
+## Description
+The aim of this application is to enable manager's to have quick and efficient access to thier team members basic inforamtion such as emails, github profiles, team members id and office number. We all can think times when we need to relay a quick message or update groups of people of people about changes that might have acured or share information so everyone is on the same page within on organization.
 
-Your task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so you’ll also write a unit test for every part of your code and ensure that it passes each test.
+## Technologies used
+- inquirer: an npm package that provides an easy way to capture user input information in the command line
+- javascript
+- bootstrap library
+- node.js
 
-Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and all of the tests passing. You’ll need to submit a link to the video AND add it to the readme of your project.
+### Demonstration
 
-> **Note**: There is no starter code for this assignment.
+[DEMONSTRATION VIDIO](https://drive.google.com/file/d/1BywLG_64WYxOU1ZyyvtxIIZ5PPWeEb5o/view
+)
 
-## User Story
-
-```md
-AS A manager
-I WANT to generate a webpage that displays my team's basic info
-SO THAT I have quick access to their emails and GitHub profiles
-```
-
-## Acceptance Criteria
-
-```md
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for my team members and their information
 THEN an HTML file is generated that displays a nicely formatted team roster based on user input
@@ -36,11 +31,6 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
-```
 
-## Mock-Up
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
-
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
-
+[GIF]()
