@@ -82,8 +82,9 @@ const internHTML = (employeeObj) =>{
 
 
 const htmlGenerator = (answers) => {
-   // console.log(answers);   // --> teamMembers : [Manager, Engineer, Engineer, Intern]
+   // console.log(htmlGenerator);   // --> teamMembers : [Manager, Engineer, Engineer, Intern]
         let myteam = [];
+        console.log(myteam)
         console.log(myteam)
     answers.forEach(emp => {
         if(emp.getRole() === 'Manager') {
