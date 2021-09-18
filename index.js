@@ -5,8 +5,8 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "./output/index.html")
-const outputPath = path.join(OUTPUT_DIR, "'./src/page-template.js");
+const OUTPUT_DIR = path.resolve(__dirname,"output" );
+const outputPath = path.join(OUTPUT_DIR, "index.html");
 
 const render = require("./src/page-template.js");
 const { run } = require("jest");
@@ -261,3 +261,6 @@ function appMenu() {
 }
 
 appMenu();
+
+
+
